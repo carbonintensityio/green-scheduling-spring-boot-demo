@@ -1,5 +1,6 @@
 package io.carbonintensity.demo.spring.business;
 
+import io.carbonintensity.scheduler.ConcurrentExecution;
 import io.carbonintensity.scheduler.GreenScheduled;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +19,7 @@ public class GreenSuccessiveScheduler {
         this.businessService = businessService;
     }
 
-    @GreenScheduled(successive = "30s 1M 4h", duration = "40s", zone = "NL")
+    @GreenScheduled(successive = "30s 2m30s 2m30s", duration = "40s", zone = "NL")
     public void greenSuccessiveJob() {
         log.info("Run Green Scheduled Successive Job");
         businessService.runBusinessTasks(Duration.ofSeconds(40));

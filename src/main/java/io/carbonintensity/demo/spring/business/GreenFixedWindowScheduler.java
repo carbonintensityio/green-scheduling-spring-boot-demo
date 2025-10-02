@@ -18,7 +18,7 @@ public class GreenFixedWindowScheduler {
         this.businessService = businessService;
     }
 
-    @GreenScheduled(fixedWindow = "05:15 08:15", duration = "2h", zone = "NL")
+    @GreenScheduled(fixedWindow = "00:00 23:59", duration = "40s", zone = "NL")
     public void greenFixedWindowJob() {
         log.info("Run Green Scheduled Fixed-Window Job");
         businessService.runBusinessTasks(Duration.ofSeconds(40));

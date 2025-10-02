@@ -3,18 +3,12 @@ spring.application.name: green-scheduling-spring-boot-demo
 server:
   port: 8088
 
-greenScheduler:
+
+greenscheduled:
   enabled: true
   jobExecutors: 10
   overdueGracePeriod: PT5S
   shutdownGracePeriod: PT3S
   startMode: NORMAL
-  apiKey:
-  apiUrl: https://carbonintensity-o.cloud.first8.nl
-
-logging:
-  level:
-    io:
-      carbonintensity:
-        executionplanner: debug
-        scheduler: debug
+  apiKey: <insert>
+  apiUrl: https://api.carbonintensity.io
