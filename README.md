@@ -16,8 +16,7 @@ Before running the demo, ensure you have the following:
 
 ## Setup
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/carbonintensityio/green-scheduling-spring-boot-demo.git
-   cd green-scheduling-spring-boot-demo
+1. Clone the repository.
+2. Request an API key at https://carbonintensity.io
+3. Add the API key to the application.yaml
+4. Run the application.

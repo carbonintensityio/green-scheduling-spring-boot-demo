@@ -19,7 +19,7 @@ public class GreenSuccessiveScheduler {
         this.businessService = businessService;
     }
 
-    @GreenScheduled(successive = "30s 2m30s 2m30s", duration = "40s", zone = "NL")
+    @GreenScheduled(successive = "30s 2m30s 2m30s", duration = "40s", carbonIntensityZone = "NL")
     public void greenSuccessiveJob() {
         log.info("Run Green Scheduled Successive Job");
         businessService.runBusinessTasks(Duration.ofSeconds(40));
